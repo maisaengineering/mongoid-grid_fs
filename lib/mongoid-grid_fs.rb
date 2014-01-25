@@ -215,11 +215,11 @@
           end
 
           def binary_for(*buf)
-            if defined?(Moped::BSON)
-              Moped::BSON::Binary.new(:generic, buf.join)
-            else
+            # if defined?(Moped::BSON)
+              # Moped::BSON::Binary.new(:generic, buf.join)
+            # else
               BSON::Binary.new(buf.join, :generic)
-            end
+            # end
           end
 
           def get(id)
